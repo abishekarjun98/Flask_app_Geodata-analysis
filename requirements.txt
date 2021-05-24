@@ -1,0 +1,10 @@
+
+flask
+pandas
+joblib
+scikit-learn
+gmaps
+Werkzeug==2.0
+matplotlib
+requests
+openpyxl
