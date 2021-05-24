@@ -14,15 +14,15 @@ Whenever an user enters a particular latitude and Longitude, Map is rendered wit
 
 ## **Installation** 
 
-->Create a virtual environment in root project directory - python3 -m venv env
+- Create a virtual environment in root project directory - python3 -m venv env
 
-->Activate the env - source env/bin/activate(Linux),env/Scripts/activate(Windows)
+- Activate the env - source env/bin/activate(Linux),env/Scripts/activate(Windows)
 
-->Install dependencies - pip install -r requirements.txt
+- Install dependencies - pip install -r requirements.txt
 
-->Run export/set FLASK_APP=new.py in terminal
+- Run export/set FLASK_APP=new.py in terminal
 
-->run export/set FLASK_env=development
+- Run export/set FLASK_env=development
 
-->Run flaskrun
+- Run flaskrun
 
