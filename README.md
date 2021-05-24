@@ -10,7 +10,7 @@ Kmean-Clustering
 
  ## **Implementation**
 Whenever an user enters a particular latitude and Longitude, Map is rendered with the entered coordinates as center and the result of clstering is displaed. 
-**Note:** currently the implementation is done only for the state of Karnataka(due to lack of oxygen plants data)
+**Note:** currently the implementation is done only for the state of Karnataka(due to lack of oxygen plants data), the model can be deployed for any dataset.
 
 ## **Installation** 
 
