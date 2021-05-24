@@ -40,9 +40,9 @@ color_map2=[(255,0,0),(0,255,0),(0,0,255),(255,255,0),(0,255,255),(255,0,255),(1
 
 
 #df = pd.read_excel(os.path.join('.\dataset', "hospital.xlsx"),engine='openpyxl',index_col=False)
-df=pd.read_csv(open(os.path.dirname(__file__) + '\dataset\hospital.csv'))
+df=pd.read_csv(open(os.path.dirname(__file__) + '/dataset/hospital.csv'))
 
-oxy_df=pd.read_csv(open(os.path.dirname(__file__) + '\dataset\latlongs_oxy.csv'))
+oxy_df=pd.read_csv(open(os.path.dirname(__file__) + '/dataset/latlongs_oxy.csv'))
 
 
 #######################################################
@@ -183,6 +183,10 @@ figure_layout = {
     'width': '600px',
     'height': '600px',
 }
+figure_layout2 = {
+    'width': '600px',
+    'height': '600px',
+}
 
 cluster_df_list=[] #grouping the clusters so that they can be added to a layer
 for m in range(clu_num):
@@ -204,7 +208,7 @@ Suggested_plants_layer=gmaps.marker_layer(centroid_list,info_box_content=centroi
 
 #Layer 3
 #Existing_plants_layer=gmaps.marker_layer(oxy_df[["Latitude","Longitude"]])  
-Existing_plants_layer=gmaps.symbol_layer(oxy_df[["Latitude","Longitude"]],fill_color="rgb(0,0,0)",stroke_color="rgb(0,0,0)",scale=3)
+Existing_plants_layer=gmaps.symbol_layer(oxy_df[["Latitude","Longitude"]],fill_color="rgb(0,0,0)",stroke_color="rgb(0,0,0)",scale=3,info_box_content=oxy_df["Address of Plants"])
 
 
 
@@ -222,14 +226,24 @@ def Config_Map(lats,longs):
   fig_final.add_layer(Suggested_plants_layer)
 
   fig_final.add_layer(Existing_plants_layer)
-#######################################################
 
-
-#######################################################
   embed_minimal_html('templates/map.html', views=[fig_final])
 
   return render_template("map.html")
 #######################################################
+
+@app.route("/map_oxy/<lats>/<longs>")
+def Config_Oxy_map(lats,longs):
+  Map_cent2=(lats,longs)
+  fig_final2=gmaps.figure(center=Map_cent2,layout=figure_layout2,zoom_level=7) 
+  fig_final2.add_layer(Existing_plants_layer)
+
+  embed_minimal_html('templates/map_oxy.html', views=[fig_final2])
+
+  return render_template("map_oxy.html")
+
+#######################################################
+
 
 
 if __name__ == '__main__':
