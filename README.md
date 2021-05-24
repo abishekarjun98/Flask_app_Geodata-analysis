@@ -1,3 +1,9 @@
+**Description**
+
+A Flask App which Performs Kmean Clustering on a Hospital Dataset,
+
+to find optimal locations for placement of Oxygen Plants
+
 **Algorithm used**
 Kmean-Clustering
 
