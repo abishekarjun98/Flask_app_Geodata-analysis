@@ -6,5 +6,5 @@
 ->Install dependencies - pip install -r requirements.txt ...
 ->Run export FLASK_APP=app.py in terminal
 ->RUN export FLASK_env=development
-->Run flask run
+->Run flaskrun
 
