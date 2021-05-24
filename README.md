@@ -1,4 +1,4 @@
-# Flask_app_Geodata-analysis
+
 
 ->Installation 
 ->Create a virtual environment in root project directory - virtualenv env
