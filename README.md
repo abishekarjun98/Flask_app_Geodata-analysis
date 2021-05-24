@@ -7,4 +7,4 @@
 ->Run export FLASK_APP=app.py in terminal
 ->RUN export FLASK_env=development
 ->Run flask run
-->Turn Developer Mode On
+
