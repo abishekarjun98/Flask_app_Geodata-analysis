@@ -26,7 +26,7 @@ app.config['DEBUG']= True
 
 pd.options.mode.chained_assignment = None
 
-apikey = "AIzaSyC4KrjejjTOAO_61zp7kSHfapldfDZq6go" #googlemaps key
+apikey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx" #googlemaps key #Please generate a google Maps Platform Api keyy
 
 clu_num=10
 
@@ -163,12 +163,6 @@ def decode(lati,longi):
  #decode is not called as the addresses are dumped in pickle file
 for k in range(clu_num):
   centroid_address.append(decode(Centroid_Lats[k],Centroid_Longs[k])) #function call for geocoding
-  #centroid_address.append(random.randint(0,100),random.randint(0,100))
-#######################################################
-
-#pickle.dump(centroid_address,open("centroid_address.dat","wb"))
-     
-
 
 #######################################################
 
