@@ -140,12 +140,10 @@ gdf_state["cluster_colors"]=cluster_colors #new column is created with colors fo
 #reverse geocoding 
 
 
-print(len(y_km.cluster_centers_))
 
 Centroid_Longs=y_km.cluster_centers_[:,1] #splitting centroids coords into lats and longs
 Centroid_Lats=y_km.cluster_centers_[:,0]
 
-print(Centroid_Longs)
 
 
 headers = {
@@ -192,7 +190,7 @@ cluster_df_list=[] #grouping the clusters so that they can be added to a layer
 for m in range(clu_num):
   cluster_df_list.append(gdf_state[gdf_state['Clusters'] == m])
 
-print(cluster_df_list[0])
+
 #######################################################
 #Layer 1
 #layers for map-hospital layer
